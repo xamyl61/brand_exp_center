@@ -1,0 +1,26 @@
+.field {
+    &:not(:first-child) {
+        padding-top: 20px;
+    }
+    .label {
+        // font-family: BMWTypeNext;
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $color_dark;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+
+
+
+// .inputfile:focus + label,
+// .inputfile + label:hover {
+//     background-color: red;
+// }

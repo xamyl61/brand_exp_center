@@ -1,0 +1,23 @@
+.btn {
+    height: 52px;
+    line-height: 52px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    // font-family: BMWTypeNext;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: none;
+    cursor: pointer;
+
+    &.blue {
+        background: $color_blue;
+        color: #fff;
+    }
+}

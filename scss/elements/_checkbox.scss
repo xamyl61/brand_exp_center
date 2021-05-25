@@ -1,0 +1,61 @@
+.checbox-container {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+    color: $color_dark;
+
+    a {
+        color: $color_dark;
+    }
+
+      /* Hide the browser's default checkbox */
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px; 
+        background-color: #fff;
+        border: 1px solid $color_grey;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+    }
+
+    
+    input:checked ~ .checkmark {
+        background-color: #000;
+    }
+    
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+  
+    .checkmark:after {
+        left: 4px;
+        top: 0px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+}
+  
+
+  
+  

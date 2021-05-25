@@ -1,0 +1,30 @@
+.footer {
+    background: #000;
+    padding: 20px 40px 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+    &-copy {
+
+    }
+
+    &-nav {
+        max-width: 60%;
+        text-align: right;
+
+        a {
+            color: #fff;
+            // font-family: BMWTypeNext;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.dropdown {
+    position: relative;
+
+    .dropbtn {
+        width: 100%;
+        display: block;
+        padding: 0 20px;
+        border: 1px solid #BBBBBB;
+        box-sizing: border-box;
+        height: 52px;
+        line-height: 52px;
+        background: #fff;
+        outline: none;
+        box-shadow: none;
+        background-image: url("../img/icons/icon-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) center;
+    }
+
+    &-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        border: 1px solid #BBBBBB;
+        border-top: none;
+        box-sizing: border-box;
+        background: #fff;
+        outline: none;
+        box-shadow: none;
+
+        span {
+            color: black;
+            height: 52px;
+            line-height: 52px;
+            padding: 0 20px;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+}
+  
+  

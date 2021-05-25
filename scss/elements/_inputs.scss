@@ -1,0 +1,56 @@
+.input {
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+    border: 1px solid #BBBBBB;
+    box-sizing: border-box;
+    height: 52px;
+    line-height: 52px;
+    background: #fff;
+    outline: none;
+    box-shadow: none;
+
+    // font-family: BMWTypeNext;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+        font-family: BMWTypeNext;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        position: relative;
+        &:not(:first-child) {
+            padding-top: 20px;
+        }
+        &:before {
+            content: "+";
+            font-size: 20px;
+            margin-right: 7px;
+            position: relative;
+            top: 2px;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 1px;
+            left: 20px;
+            right: 0;
+            bottom: -5px;
+            background: $color_dark;
+        }
+    }
+}

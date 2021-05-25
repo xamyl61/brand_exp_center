@@ -1,0 +1,38 @@
+ .header {
+     height: 180px;
+     padding: 0 41px;
+     display: flex;
+     justify-content: space-between;
+     background-image: url("../img/header-bg.jpeg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     &-login {
+         display: flex;
+         align-items: center;
+     }
+     .header-auth {
+         margin-top: 19px;
+     }
+     .logo {
+         max-width: 105px;
+         margin-left: 47px;
+     }
+    //  &-mobile_bg {
+    //      position: absolute;
+    //      left: 0;
+    //      right: 0;
+    //      top: 0;
+    //      z-index: -1;
+    //  }
+    &-title {
+        // font-family: BMWTypeNext;
+        margin-top: 41px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        text-decoration: none;
+    }
+ }
