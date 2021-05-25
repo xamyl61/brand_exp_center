@@ -265,8 +265,29 @@ h6 {
   margin: 0;
 }
 
+.center {
+  text-align: center;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
 @media screen and (min-width: 1024px) {
-  body {
+  .content {
     background-image: url("../img/main_bg.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -285,16 +306,39 @@ h6 {
 .title-h1 {
   font-style: normal;
   font-weight: normal;
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 24px;
+  line-height: 32px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .title-h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
 }
 
 .title-h3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .title-h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.text-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #262626;
+  border-bottom: 1px solid #262626;
 }
 
 .dropdown {
@@ -303,17 +347,26 @@ h6 {
 .dropdown .dropbtn {
   width: 100%;
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
   border: 1px solid #BBBBBB;
   box-sizing: border-box;
-  height: 52px;
-  line-height: 52px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
   background: #fff;
   outline: none;
   box-shadow: none;
   background-image: url("../img/icons/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
+}
+@media screen and (min-width: 768px) {
+  .dropdown .dropbtn {
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
 }
 .dropdown-content {
   display: none;
@@ -328,11 +381,20 @@ h6 {
 }
 .dropdown-content span {
   color: black;
-  height: 52px;
-  line-height: 52px;
-  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
   text-decoration: none;
   display: block;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .dropdown-content span {
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
 }
 .dropdown-content span:hover {
   background-color: #ddd;
@@ -341,17 +403,25 @@ h6 {
 .input {
   width: 100%;
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
   border: 1px solid #BBBBBB;
   box-sizing: border-box;
-  height: 52px;
-  line-height: 52px;
+  height: 40px;
+  line-height: 40px;
   background: #fff;
   outline: none;
   box-shadow: none;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .input {
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
 }
 
 .inputfile {
@@ -370,26 +440,20 @@ h6 {
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
-}
-.inputfile + label:not(:first-child) {
-  padding-top: 20px;
+  display: inline-block;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-decoration-color: #8E8E8E;
+  cursor: pointer;
 }
 .inputfile + label:before {
   content: "+";
   font-size: 20px;
   margin-right: 7px;
-  position: relative;
-  top: 2px;
-}
-.inputfile + label:after {
-  content: "";
-  display: block;
   position: absolute;
-  height: 1px;
-  left: 20px;
-  right: 0;
-  bottom: -5px;
-  background: #262626;
+  left: 0;
+  top: 2px;
+  top: calc(50% - 10px);
 }
 
 .checbox-container {
@@ -443,7 +507,12 @@ h6 {
 }
 
 .field:not(:first-child) {
-  padding-top: 20px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .field:not(:first-child) {
+    padding-top: 20px;
+  }
 }
 .field .label {
   display: block;
@@ -453,7 +522,12 @@ h6 {
   line-height: 20px;
   text-transform: uppercase;
   color: #262626;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .field .label {
+    padding-bottom: 10px;
+  }
 }
 
 .btn {
@@ -479,8 +553,8 @@ h6 {
 }
 
 .header {
-  height: 180px;
-  padding: 0 41px;
+  height: 59px;
+  padding: 0 21px;
   display: flex;
   justify-content: space-between;
   background-image: url("../img/header-bg.jpeg");
@@ -488,29 +562,68 @@ h6 {
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 41px;
+    height: 180px;
+  }
+}
 .header-login {
   display: flex;
   align-items: center;
 }
+.header-login .user-icon {
+  width: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header-login .user-icon {
+    width: 30px;
+  }
+}
 .header .header-auth {
-  margin-top: 19px;
+  margin-top: 9px;
+}
+@media screen and (min-width: 768px) {
+  .header .header-auth {
+    margin-top: 31px;
+  }
 }
 .header .logo {
   max-width: 105px;
-  margin-left: 47px;
+  margin-left: 20px;
+  max-width: 67px;
+}
+@media screen and (min-width: 1153px) {
+  .header .logo {
+    max-width: 100px;
+    margin-left: 47px;
+  }
 }
 .header-title {
-  margin-top: 41px;
+  margin-top: 20px;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 19px;
   color: #fff;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  .header-title {
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 41px;
+  }
+}
 
 .sidebar {
-  padding: 0 20px 60px;
+  padding: 0 20px 30px;
+}
+@media screen and (min-width: 768px) {
+  .sidebar {
+    padding: 0 20px 60px;
+    min-height: 100%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .sidebar {
@@ -539,28 +652,77 @@ h6 {
   margin: 0 auto;
 }
 .sidebar-cont .title-h1 {
-  padding: 60px 0 20px;
+  padding: 30px 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .sidebar-cont .title-h1 {
+    padding: 60px 0 20px;
+  }
 }
 .sidebar-cont .title-h3 {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .sidebar-cont .title-h3 {
+    padding-bottom: 30px;
+  }
 }
 .sidebar-cont .title-h3.pb20 {
   padding-bottom: 20px;
 }
 .sidebar hr {
-  margin: 30px 0 0;
+  margin: 20px 0 0;
 }
-
+@media screen and (min-width: 768px) {
+  .sidebar hr {
+    margin: 30px 0 0;
+  }
+}
+.sidebar .approval {
+  padding: 20px 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .sidebar .approval {
+    padding: 18px 0 30px;
+  }
+}
+.sidebar .upload-inputs > div:not(:first-child) {
+  padding-top: 20px;
+}
 .footer {
   background: #000;
-  padding: 20px 40px 10px;
-  display: flex;
-  justify-content: space-between;
+  padding: 20px 20px 10px;
   color: #fff;
 }
-.footer-nav {
-  max-width: 60%;
-  text-align: right;
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 20px 40px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-copy {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer-copy {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    max-width: 60%;
+    text-align: right;
+  }
+}
+.footer-nav .item {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer-nav .item {
+    display: inline-block;
+    margin-left: 20px;
+  }
 }
 .footer-nav a {
   color: #fff;
@@ -569,10 +731,28 @@ h6 {
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  display: inline-block;
   text-decoration: none;
+}
+
+.form_code {
+  padding-top: 16px;
+}
+.form_code .form .btn {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .form_code .form .btn {
+    margin-top: 20px;
+  }
+}
+.form_code .form .text-link {
+  margin-top: 10px;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .form_code .form .text-link {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

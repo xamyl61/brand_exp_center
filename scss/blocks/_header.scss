@@ -1,38 +1,62 @@
  .header {
-     height: 180px;
-     padding: 0 41px;
-     display: flex;
-     justify-content: space-between;
-     background-image: url("../img/header-bg.jpeg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     &-login {
-         display: flex;
-         align-items: center;
-     }
-     .header-auth {
-         margin-top: 19px;
-     }
-     .logo {
-         max-width: 105px;
-         margin-left: 47px;
-     }
-    //  &-mobile_bg {
-    //      position: absolute;
-    //      left: 0;
-    //      right: 0;
-    //      top: 0;
-    //      z-index: -1;
-    //  }
+    height: 59px;
+    padding: 0 21px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../img/header-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: $tablet) {
+        padding: 0 41px;
+        height: 180px;
+    }
+
+    &-login {
+        display: flex;
+        align-items: center;
+
+        .user-icon {
+            width: 16px;
+
+            @media screen and (min-width: $tablet) {
+                width: 30px;
+            }
+        }
+    }
+    .header-auth {
+        margin-top: 9px;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 31px;
+        }
+    }
+    .logo {
+        max-width: 105px;
+        margin-left: 20px;
+        max-width: 67px;
+
+        @media screen and (min-width: $large) {
+            max-width: 100px;
+            margin-left: 47px;
+        }
+    }
+
     &-title {
         // font-family: BMWTypeNext;
-        margin-top: 41px;
+        margin-top: 20px;
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
-        line-height: 27px;
+        font-size: 14px;
+        line-height: 19px;
         color: #fff;
         text-decoration: none;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 20px; 
+            line-height: 27px;
+            margin-top: 41px;
+        }
     }
  }

@@ -1,6 +1,10 @@
 .field {
     &:not(:first-child) {
-        padding-top: 20px;
+        padding-top: 10px;
+
+        @media screen and (min-width: $tablet) {
+            padding-top: 20px;
+        }
     }
     .label {
         // font-family: BMWTypeNext;
@@ -11,16 +15,10 @@
         line-height: 20px;
         text-transform: uppercase;
         color: $color_dark;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 10px;
+        }
     }
-
-
 }
-
-
-
-
-// .inputfile:focus + label,
-// .inputfile + label:hover {
-//     background-color: red;
-// }

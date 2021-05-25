@@ -2,15 +2,39 @@
     // font-family: BMWTypeNext;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 24px;
+    line-height: 32px;
     text-transform: uppercase;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px;
+        line-height: 64px;
+    }
 }
 
 .title-h3 {
     // font-family: BMWTypeNext;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+
+
+.text-link {
+    // font-family: BMWTypeNext;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: $color_dark;
+    border-bottom: 1px solid $color_dark;
 }

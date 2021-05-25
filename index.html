@@ -30,7 +30,7 @@
       <div class="header-auth">
         <div class="header-login">
           <a href="">
-            <img src="img/icons/icon-user.svg" alt="">
+            <img class="user-icon" src="img/icons/icon-user.svg" alt="">
           </a>
           <img class="logo" src="img/ex_logo@2x.png" alt="">
         </div>
@@ -102,58 +102,58 @@
             <input type="text" class="input" placeholder="Введите название станции">
           </div>
 
-          <hr class="">
+          <hr class="line_1">
 
           <h3 class="title-h3 pt20 pb20">Фотографии документов</h3>
 
-          <div>
-            <div class="field">
+          <div class="upload-inputs">
+            <div class="">
               <input type="file" name="file1" id="file1" class="inputfile" />
               <label for="file1">Паспорт, первая страница</label>
             </div>
   
-            <div class="field">
+            <div class="">
               <input type="file" name="file2" id="file2" class="inputfile" />
               <label for="file2">Паспорт, страница прописки</label>
             </div>
   
-            <div class="field">
+            <div class="">
               <input type="file" name="file3" id="file"3 class="inputfile" />
               <label for="file3">Водительское удостоверение, лицевая сторона</label>
             </div>
   
-            <div class="field">
+            <div class="">
               <input type="file" name="file4" id="file4" class="inputfile" />
               <label for="file4">Водительское удостоверение, обратная сторона</label>
             </div>
           </div>
 
-          <hr class="">
+          <hr class="line_2">
 
-          <div class="field">
+          <div class="field approval">
             <label class="checbox-container">Согласие на <a href="#">обработку персональных данных</a>
               <input type="checkbox" checked="checked">
               <span class="checkmark"></span>
             </label>
           </div>
 
-          <button class="btn blue mt30px">Зарегистрироваться</button>
+          <button class="btn blue">Зарегистрироваться</button>
 
         </form>
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-copy">© BMW 2021</div>
-
-      <div class="footer-nav">
-        <a href="#">Часто задаваемые вопросы</a>
-        <a href="#">Контакты</a>
-        <a href="#">copyright</a>
-        <a href="#">политика конфиденциальности</a>
-      </div>
-    </footer>
   </div>
+  <footer class="footer">
+    <div class="footer-copy">© BMW 2021</div>
+
+    <div class="footer-nav">
+      <div class="item"><a href="#">Часто задаваемые вопросы</a></div>
+      <div class="item"><a href="#">Контакты</a></div>
+      <div class="item"><a href="#">copyright</a></div>
+      <div class="item"><a href="#">политика конфиденциальности</a></div>
+    </div>
+  </footer>
 
   <!-- Временное подключение jquery, потом удлить -->
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>

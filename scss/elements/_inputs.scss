@@ -1,11 +1,11 @@
 .input {
     width: 100%;
     display: block;
-    padding: 0 20px;
+    padding: 0 10px;
     border: 1px solid #BBBBBB;
     box-sizing: border-box;
-    height: 52px;
-    line-height: 52px;
+    height: 40px;
+    line-height: 40px;
     background: #fff;
     outline: none;
     box-shadow: none;
@@ -13,7 +13,14 @@
     // font-family: BMWTypeNext;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 12px;
+
+    @media screen and (min-width: $tablet) {
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        padding: 0 20px;
+    }
 }
 
 .inputfile {
@@ -32,25 +39,20 @@
         line-height: 20px;
         text-transform: uppercase;
         position: relative;
-        &:not(:first-child) {
-            padding-top: 20px;
-        }
+        display: inline-block;
+        padding-left: 20px;
+        text-decoration: underline;
+        text-decoration-color: #8E8E8E;
+        cursor: pointer;
+
         &:before {
             content: "+";
             font-size: 20px;
             margin-right: 7px;
-            position: relative;
-            top: 2px;
-        }
-        &:after {
-            content: "";
-            display: block;
             position: absolute;
-            height: 1px;
-            left: 20px;
-            right: 0;
-            bottom: -5px;
-            background: $color_dark;
+            left: 0;
+            top: 2px;
+            top: calc(50% - 10px);
         }
     }
 }
