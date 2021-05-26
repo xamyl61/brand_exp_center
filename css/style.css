@@ -10,6 +10,118 @@
   margin-top: 30px;
 }
 
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Bold.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Light.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Bold.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Light.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Regular.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Bold.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Bold.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Regular.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Thin.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Thin.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Thin.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Light.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Thin.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Regular.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNext";
+  src: url("../fonts/bmw_typenext/BMWTypeNext-Regular.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNext-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BMWTypeNextTT";
+  src: url("../fonts/bmw_typenext/BMWTypeNextTT-Light.woff2") format("woff2"), url("../fonts/bmw_typenext/BMWTypeNextTT-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -276,6 +388,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: "BMWTypeNext";
 }
 
 .content {
@@ -309,6 +422,7 @@ body {
   font-size: 24px;
   line-height: 32px;
   text-transform: uppercase;
+  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   .title-h1 {
@@ -322,6 +436,7 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   .title-h3 {
@@ -544,7 +659,7 @@ body {
   border: none;
   outline: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   cursor: pointer;
 }
 .btn.blue {
