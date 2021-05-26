@@ -1,8 +1,5 @@
  .header {
-    height: 59px;
-    padding: 0 21px;
-    display: flex;
-    justify-content: space-between;
+    padding: 8px 21px;
     background-image: url("../img/header-bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +7,21 @@
 
     @media screen and (min-width: $tablet) {
         padding: 0 41px;
-        height: 180px;
+        min-height: 180px;
+    }
+
+    @media screen and (min-width: $medium) {
+        background-image: none;
+    }
+
+    &.image_bg {
+        background-image: url("../img/header_bg_top.jpeg");
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &-login {
@@ -26,7 +37,6 @@
         }
     }
     .header-auth {
-        margin-top: 9px;
 
         @media screen and (min-width: $tablet) {
             margin-top: 31px;
@@ -44,8 +54,6 @@
     }
 
     &-title {
-        // font-family: BMWTypeNext;
-        margin-top: 20px;
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
@@ -57,6 +65,55 @@
             font-size: 20px; 
             line-height: 27px;
             margin-top: 41px;
+        }
+    }
+
+    &-content {
+        color: #fff;
+        position: relative;
+        padding-bottom: 22px;
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 60px;
+        }
+
+        hr {
+            margin: 20px 0 30px;
+            height: 0px;
+            border-color: #fff;
+            width: calc(100% - 60px);
+
+            @media screen and (min-width: $tablet) {
+                margin: 40px 0 60px;
+                width: calc(100% - 91px);
+            }
+            @media screen and (min-width: $large) {
+                margin: 40px 0 60px;
+                width: calc(100% - 150px);
+            }
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 32px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+
+            @media screen and (min-width: $tablet) {
+                padding-bottom: 20px;
+                font-size: 48px;
+                line-height: 64px;
+            }
+        }
+        h2 {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 20px;
+
+            @media screen and (min-width: $tablet) {
+                font-size: 32px;
+                line-height: 40px;
+            }
         }
     }
  }

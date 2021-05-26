@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pt20 {
   padding-top: 20px;
 }
@@ -122,6 +123,57 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/fonts/icomoon.eot?y20bd6");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?y20bd6#iefix") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.ttf?y20bd6") format("truetype"), url("../fonts/icomoon/fonts/icomoon.woff?y20bd6") format("woff"), url("../fonts/icomoon/fonts/icomoon.svg?y20bd6#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nav:before {
+  content: "";
+  color: #8e8e8e;
+}
+
+.icon-calendar:before {
+  content: "";
+}
+
+.icon-akpp:before {
+  content: "";
+  color: #4d4d4d;
+}
+
+.icon-engine:before {
+  content: "";
+  color: #4d4d4d;
+}
+
+.icon-gas:before {
+  content: "";
+  color: #4d4d4d;
+}
+
+.icon-rear:before {
+  content: "";
+  color: #4d4d4d;
+}
+
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -389,6 +441,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "BMWTypeNext";
+  background: #E5E5E5;
 }
 
 .content {
@@ -406,16 +459,34 @@ body {
     background-position: center center;
     background-size: cover;
   }
+}
+.content.no_bg {
+  background: none !important;
+}
 
-  .sidebar {
-    max-width: 586px;
-    background: #fff;
-  }
-
-  .header {
-    background-image: none !important;
+.padding-block {
+  padding: 20px 20px 30px;
+  display: grid;
+  grid-gap: 20px;
+}
+@media screen and (min-width: 375px) {
+  .padding-block {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 }
+@media screen and (min-width: 768px) {
+  .padding-block {
+    padding: 40px 40px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(334px, 1fr));
+  }
+}
+@media screen and (min-width: 1153px) {
+  .padding-block {
+    padding: 40px 40px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
 .title-h1 {
   font-style: normal;
   font-weight: normal;
@@ -646,32 +717,42 @@ body {
 }
 
 .btn {
-  height: 52px;
-  line-height: 52px;
+  height: 40px;
+  line-height: 38px;
   box-sizing: border-box;
   width: 100%;
   display: block;
   text-align: center;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  border: none;
+  font-size: 12px;
+  border: 1px solid transparent;
   outline: none;
   box-shadow: none;
   border-radius: 0;
   cursor: pointer;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    height: 52px;
+    line-height: 50px;
+    font-size: 16px;
+  }
 }
 .btn.blue {
   background: #316ACD;
   color: #fff;
+  border-color: #316ACD;
+}
+.btn.flat {
+  background: none;
+  color: #000;
+  border-color: #000;
 }
 
 .header {
-  height: 59px;
-  padding: 0 21px;
-  display: flex;
-  justify-content: space-between;
+  padding: 8px 21px;
   background-image: url("../img/header-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -680,8 +761,21 @@ body {
 @media screen and (min-width: 768px) {
   .header {
     padding: 0 41px;
-    height: 180px;
+    min-height: 180px;
   }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    background-image: none;
+  }
+}
+.header.image_bg {
+  background-image: url("../img/header_bg_top.jpeg");
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header-login {
   display: flex;
@@ -694,9 +788,6 @@ body {
   .header-login .user-icon {
     width: 30px;
   }
-}
-.header .header-auth {
-  margin-top: 9px;
 }
 @media screen and (min-width: 768px) {
   .header .header-auth {
@@ -715,7 +806,6 @@ body {
   }
 }
 .header-title {
-  margin-top: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -730,9 +820,63 @@ body {
     margin-top: 41px;
   }
 }
+.header-content {
+  color: #fff;
+  position: relative;
+  padding-bottom: 22px;
+}
+@media screen and (min-width: 768px) {
+  .header-content {
+    padding-bottom: 60px;
+  }
+}
+.header-content hr {
+  margin: 20px 0 30px;
+  height: 0px;
+  border-color: #fff;
+  width: calc(100% - 60px);
+}
+@media screen and (min-width: 768px) {
+  .header-content hr {
+    margin: 40px 0 60px;
+    width: calc(100% - 91px);
+  }
+}
+@media screen and (min-width: 1153px) {
+  .header-content hr {
+    margin: 40px 0 60px;
+    width: calc(100% - 150px);
+  }
+}
+.header-content h1 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .header-content h1 {
+    padding-bottom: 20px;
+    font-size: 48px;
+    line-height: 64px;
+  }
+}
+.header-content h2 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .header-content h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 
 .sidebar {
   padding: 0 20px 30px;
+  background: #fff;
 }
 @media screen and (min-width: 768px) {
   .sidebar {
@@ -743,6 +887,7 @@ body {
   .sidebar {
     margin-top: -180px;
     min-height: 100%;
+    max-width: 586px;
   }
 }
 .sidebar .sidebar-header-title {
@@ -868,6 +1013,40 @@ body {
   .form_code .form .text-link {
     margin-top: 20px;
   }
+}
+
+.car-card {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+.car-card .photo {
+  padding: 21px 26px;
+}
+.car-card .photo img {
+  margin: 0 auto;
+}
+.car-card .cont {
+  padding: 0 20px 20px;
+}
+.car-card .title {
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+.car-card .property-item {
+  font-size: 10px;
+  line-height: 18px;
+}
+.car-card .property-item:not(:first-child) {
+  padding-top: 10px;
+}
+.car-card .property-item i {
+  color: #C4C4C4;
+  margin-right: 8px;
+}
+.car-card .btn {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

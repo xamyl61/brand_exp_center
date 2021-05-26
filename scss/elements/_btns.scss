@@ -1,22 +1,35 @@
 .btn {
-    height: 52px;
-    line-height: 52px;
+    height: 40px;
+    line-height: 38px;
     box-sizing: border-box;
     width: 100%;
     display: block;
     text-align: center;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    border: none;
+    font-size: 12px;
+    border: 1px solid transparent;
     outline: none;
     box-shadow: none;
     border-radius: 0;
     cursor: pointer;
+    text-decoration: none;
+
+    @media screen and (min-width: $tablet) {
+        height: 52px;
+        line-height: 50px;
+        font-size: 16px;
+    }
 
     &.blue {
         background: $color_blue;
         color: #fff;
+        border-color: $color_blue;
+    }
+
+    &.flat {
+        background: none;
+        color: #000;
+        border-color: #000;
     }
 }

@@ -290,6 +290,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'BMWTypeNext';
+    background: #E5E5E5;
   }
   .content {
     flex: 1 0 auto;
@@ -298,21 +299,44 @@
     flex-shrink: 0;
   }
 
-  @media screen and (min-width: $medium) {
-    .content {
-      background-image: url("../img/main_bg.jpeg");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
-    .sidebar {
-      max-width: 586px;
-      background: #fff;
-    }
-    .header {
-      background-image: none!important;
-    }
+  
+.content {
+  @media screen and (min-width: $medium) { 
+    background-image: url("../img/main_bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
+
+  &.no_bg {
+    background: none!important;
+  }
+}
+
+.padding-block {
+
+  padding: 20px 20px 30px;
+
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 20px;
+  
+  @media screen and (min-width: $small_mobile) {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 40px 40px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(334px, 1fr));
+  }
+  @media screen and (min-width: $large) {
+    padding: 40px 40px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+  
+
+  
 
 
 

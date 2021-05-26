@@ -1,6 +1,7 @@
 
 .sidebar {
     padding: 0 20px 30px;
+    background: #fff;
 
     @media screen and (min-width: $tablet) {
         padding: 0 20px 60px;
@@ -9,6 +10,8 @@
     @media screen and (min-width: $medium) {
         margin-top: -180px;
         min-height: 100%;
+        max-width: 586px;
+        
     }
     
 
