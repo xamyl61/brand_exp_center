@@ -1274,5 +1274,15 @@ body {
     padding-top: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .ask .btn {
+    max-width: 334px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .ask .btn {
+    max-width: 444px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -122,4 +122,14 @@
             padding-top: 0;
         }
     }
+
+    .btn {
+        @media screen and (min-width: $tablet) {
+            max-width: 334px;
+        }
+
+        @media screen and (min-width: $extra_large) {
+            max-width: 444px;
+        }
+    }
 }
