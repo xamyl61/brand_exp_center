@@ -1,0 +1,96 @@
+.main_block {
+    font-weight: 300;
+    .text-block {
+        font-size: 16px;
+        line-height: 22px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        @media screen and (min-width: $extra_large) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 175px;
+        }
+
+        & > div {
+            &:not(:first-child) {
+                padding-top: 20px;
+                @media screen and (min-width: $tablet) {
+                    padding-top: 40px;
+                }
+                @media screen and (min-width: $extra_large) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .image-block {
+        margin-top: 20px;
+        box-sizing: border-box;
+        padding: 20px;
+        min-height: 246px;
+        background-image: url("../img/pic_bg1.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 40px;
+            padding: 40px;
+            min-height: 530px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        @media screen and (min-width: $medium) {
+            margin-top: 60px;
+        }
+        @media screen and (min-width: $extra_large) {
+            padding-left: 0;
+            padding-right: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 175px;
+            background-image: url("../img/pic_bg1_large.jpeg");
+        }
+        & > div {
+            @media screen and (min-width: $large) {
+                padding-right: 50px;
+            }
+        }
+        p {
+            margin: 0 0 10px;
+            @media screen and (min-width: $medium) {
+                max-width: 680px;
+            }
+        }
+        br.tablet {
+            display: none;
+            @media screen and (min-width: $tablet) {
+                display: inline;
+            }
+            @media screen and (min-width: $medium) {
+                display: none;
+            }
+        }
+        br.medium {
+            display: none;
+            @media screen and (min-width: $medium) {
+                display: inline;
+            }
+            @media screen and (min-width: $large) {
+                display: none;
+            }
+            @media screen and (min-width: 1600px) {
+                display: inline;
+            }
+        }
+    }
+}

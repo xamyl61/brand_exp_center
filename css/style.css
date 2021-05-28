@@ -964,6 +964,16 @@ body {
     line-height: 40px;
   }
 }
+.header-content .btn {
+  margin-top: 20px;
+  max-width: 214px;
+}
+@media screen and (min-width: 768px) {
+  .header-content .btn {
+    margin: 40px 0 90px;
+    min-width: 290px;
+  }
+}
 
 .sidebar {
   padding: 0 20px 30px;
@@ -1333,6 +1343,121 @@ body {
   .faq-answer p {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.main_block {
+  font-weight: 300;
+}
+.main_block .text-block {
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .main_block .text-block {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main_block .text-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 175px;
+  }
+}
+.main_block .text-block > div:not(:first-child) {
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .main_block .text-block > div:not(:first-child) {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main_block .text-block > div:not(:first-child) {
+    padding-top: 0;
+  }
+}
+.main_block .image-block {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 246px;
+  background-image: url("../img/pic_bg1.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .main_block .image-block {
+    margin-top: 40px;
+    padding: 40px;
+    min-height: 530px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main_block .image-block {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main_block .image-block {
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 175px;
+    background-image: url("../img/pic_bg1_large.jpeg");
+  }
+}
+@media screen and (min-width: 1153px) {
+  .main_block .image-block > div {
+    padding-right: 50px;
+  }
+}
+.main_block .image-block p {
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 1024px) {
+  .main_block .image-block p {
+    max-width: 680px;
+  }
+}
+.main_block .image-block br.tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .main_block .image-block br.tablet {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main_block .image-block br.tablet {
+    display: none;
+  }
+}
+.main_block .image-block br.medium {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .main_block .image-block br.medium {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1153px) {
+  .main_block .image-block br.medium {
+    display: none;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .main_block .image-block br.medium {
+    display: inline;
   }
 }
 
