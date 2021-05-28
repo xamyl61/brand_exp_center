@@ -304,8 +304,9 @@
   @media screen and (min-width: $medium) { 
     background-image: url("../img/main_bg.JPG");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 12vw 50%;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   &.no_bg {

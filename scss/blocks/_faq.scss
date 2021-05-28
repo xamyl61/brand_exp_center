@@ -1,0 +1,45 @@
+.faq {
+    .grid {
+        @media screen and (min-width: $extra_large) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 40px;
+        }
+        & > div {
+            &:not(:first-child) {
+                padding-top: 20px;
+                @media screen and (min-width: $tablet) {
+                    padding-top: 40px;
+                }
+                @media screen and (min-width: $extra_large) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    &-title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 10px;
+        @media screen and (min-width: $tablet) {
+            font-size: 32px;
+            line-height: 40px;
+            padding-bottom: 20px;
+        }
+    }
+    &-answer {
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 18px;
+            margin: 0;
+            @media screen and (min-width: $tablet) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
