@@ -478,6 +478,15 @@ body {
   }
 }
 
+.padding-block_tablet {
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .padding-block_tablet {
+    padding: 40px 40px 60px;
+  }
+}
+
 .grid-card {
   display: grid;
   grid-gap: 20px;
@@ -495,6 +504,15 @@ body {
 @media screen and (min-width: 1153px) {
   .grid-card {
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
+.white_and_shadow {
+  background: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .white_and_shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -843,6 +861,11 @@ body {
   color: #000;
   border-color: #000;
 }
+.btn.flat_white {
+  background: none;
+  color: #fff;
+  border-color: #fff;
+}
 
 .header {
   padding: 8px 21px;
@@ -972,6 +995,16 @@ body {
   .header-content .btn {
     margin: 40px 0 90px;
     min-width: 290px;
+  }
+}
+.header-content .btn.flat_white {
+  min-width: 0;
+  max-width: 90px;
+}
+@media screen and (min-width: 768px) {
+  .header-content .btn.flat_white {
+    max-width: 115px;
+    margin: 0 0 0;
   }
 }
 
@@ -1135,21 +1168,27 @@ body {
   padding-bottom: 10px;
   font-weight: 400;
 }
-.car-card .property-item {
-  font-size: 10px;
-  line-height: 18px;
-}
-.car-card .property-item:not(:first-child) {
-  padding-top: 10px;
-}
-.car-card .property-item i {
-  color: #C4C4C4;
-  margin-right: 8px;
-}
 .car-card .btn {
   margin-top: 20px;
 }
 
+.property-item {
+  font-size: 10px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .property-item {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.property-item:not(:first-child) {
+  padding-top: 10px;
+}
+.property-item i {
+  color: #C4C4C4;
+  margin-right: 8px;
+}
 @media screen and (min-width: 768px) {
   .ask .grid {
     display: grid;
@@ -1458,6 +1497,207 @@ body {
 @media screen and (min-width: 1600px) {
   .main_block .image-block br.medium {
     display: inline;
+  }
+}
+
+.col-block > .title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 0 0 10px 20px;
+}
+@media screen and (min-width: 768px) {
+  .col-block > .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.col-block .map {
+  height: 200px;
+}
+.col-block .map iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+.col-block .grid .left-col {
+  padding-bottom: 20px;
+}
+.col-block .grid .right-col .car-image {
+  margin-bottom: -10%;
+}
+.col-block .grid .user-data {
+  padding: 10px 20px 20px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .user-data {
+    padding: 20px 40px 40px;
+  }
+}
+.col-block .grid .user-data-block {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #CCCCCC;
+}
+.col-block .grid .user-data-block .item {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .user-data-block .item {
+    padding: 20px 0px;
+  }
+}
+.col-block .grid .user-data-block .item:not(:first-child) {
+  border-top: 1px solid #CCCCCC;
+}
+.col-block .grid .user-data-block .item-name {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  min-width: 135px;
+}
+.col-block .grid .user-data-block .item-value {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .user-data-block .item-value {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .user-data .btn {
+    max-width: 294px;
+    margin-left: auto;
+  }
+}
+.col-block .grid .test-drive {
+  padding: 40px 20px 20px;
+  border-top: 20px solid #000;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive {
+    padding: 40px;
+    border-top: 40px solid #000;
+  }
+}
+.col-block .grid .test-drive .top-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CCCCCC;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .top-title {
+    font-size: 22px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+}
+.col-block .grid .test-drive .title-block {
+  padding: 10px 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .title-block {
+    padding: 20px 0 20px;
+  }
+}
+.col-block .grid .test-drive .title-block .title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .title-block .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.col-block .grid .test-drive .title-block .year {
+  padding-top: 5px;
+  color: #8E8E8E;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .title-block .year {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.col-block .grid .test-drive .title-block .btn {
+  max-width: 132px;
+}
+.col-block .grid .test-drive .descr .property {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .descr .property {
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+  }
+}
+.col-block .grid .test-drive .descr .date {
+  padding: 20px 0 10px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .descr .date {
+    padding: 40px 0 20px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+.col-block .grid .test-drive .descr .contact {
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .descr .contact {
+    padding-bottom: 20px;
+  }
+}
+.col-block .grid .test-drive .descr .contact .adress {
+  color: #000;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .descr .contact .adress {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.col-block .grid .test-drive .descr .contact .adress:after {
+  content: "|";
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+  margin: 0 6px 0 10px;
+  color: #CCCCCC;
+}
+.col-block .grid .test-drive .descr .contact .phone {
+  color: #000;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .test-drive .descr .contact .phone {
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 

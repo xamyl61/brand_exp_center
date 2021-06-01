@@ -1,0 +1,200 @@
+.col-block {
+    & > .title {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 300;
+        padding: 0 0 10px 20px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    .cont {
+ 
+    }
+    .map {
+        height: 200px;  
+        iframe {
+            border: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+    .grid {
+        .left-col {
+            padding-bottom: 20px;
+        }
+        .right-col {
+            .car-image {
+                margin-bottom: -10%;
+            }
+        }
+
+        .user-data {
+            padding: 10px 20px 20px;
+            @media screen and (min-width: $tablet) {
+                padding: 20px 40px 40px;
+            }
+            &-block {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #CCCCCC;
+                .item {
+                    display: flex;
+                    padding: 10px 0;
+                    align-items: center;
+                    @media screen and (min-width: $tablet) {
+                        padding: 20px 0px;
+                    }
+                    &:not(:first-child) {
+                        border-top: 1px solid #CCCCCC;
+                    }
+                    &-name {
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        min-width: 135px;
+                    }
+                    &-value {
+                        font-size: 12px;
+                        line-height: 20px;
+                        font-weight: 400;
+
+                        @media screen and (min-width: $tablet) {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                @media screen and (min-width: $tablet) {
+                    max-width: 294px;
+                    margin-left: auto;
+                }
+            }
+        }
+
+
+        .test-drive {
+            padding: 40px 20px 20px;
+            border-top: 20px solid #000;
+
+            @media screen and (min-width: $tablet) {
+                padding: 40px;
+                border-top: 40px solid #000;
+            }
+            .top-title {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #CCCCCC;
+
+                @media screen and (min-width: $tablet) {
+                    font-size: 22px;
+                    line-height: 30px;
+                    padding-bottom: 20px;
+                }
+            }
+            .title-block {
+                padding: 10px 0 16px;
+                display: flex;
+                justify-content: space-between;
+                @media screen and (min-width: $tablet) {
+                    padding: 20px 0 20px;
+                }
+                .title {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 20px;
+                    @media screen and (min-width: $tablet) {
+                        font-size: 32px;
+                        line-height: 40px;
+                    }
+                }
+                .year {
+                    padding-top: 5px;
+                    color: #8E8E8E;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 18px;
+                    @media screen and (min-width: $tablet) {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+                .btn {
+                    max-width: 132px;
+                }
+            }
+            .descr {
+                .property {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px; 
+                    @media screen and (min-width: $tablet) {
+                        font-size: 12px;
+                        line-height: 20px;
+                        display: flex;
+
+                        & > div {
+                        }
+                    }
+                }
+                .model {
+                }
+                .date {
+                    padding: 20px 0 10px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    @media screen and (min-width: $tablet) {
+                        padding: 40px 0 20px;
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                }
+                .contact {
+                    padding-bottom: 10px;
+                    @media screen and (min-width: $tablet) {
+                        padding-bottom: 20px;
+                    }
+                    .adress {
+                        color: #000;
+                        display: inline-block;
+                        font-size: 10px;
+                        line-height: 18px;
+
+                        @media screen and (min-width: $tablet) {
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                        
+                        &:after {
+                            content: "|";
+                            font-size: 10px;
+                            position: relative;
+                            top: -1px;
+                            margin: 0 6px 0 10px;
+                            color: #CCCCCC;
+                        }
+                    }
+                    .phone {
+                        color: #000;
+                        display: inline-block;
+                        font-size: 10px;
+                        line-height: 18px;
+
+                        @media screen and (min-width: $tablet) {
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

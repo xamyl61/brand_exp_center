@@ -122,6 +122,15 @@
                 margin: 40px 0 90px;
                 min-width: 290px;
             }
+
+            &.flat_white {
+                min-width: 0;
+                max-width: 90px;
+                @media screen and (min-width: $tablet) {
+                    max-width: 115px;
+                    margin: 0 0 0;
+                }
+            }
         }
     }
  }

@@ -16,25 +16,30 @@
         padding-bottom: 10px;
         font-weight: 400;
     }
-    .property {
-        &-item {
-            font-size: 10px;
-            line-height: 18px;
-            &:not(:first-child) {
-                padding-top: 10px;
-            }
-            i {
-                // font-size: 10px;
-                color: #C4C4C4;
-                margin-right: 8px;
-            }
-            span {
-                // font-size: 10px;
-                // line-height: 18px;
-            }
-        }
-    }
     .btn {
         margin-top: 20px;
+    }
+}
+
+.property {
+    &-item {
+        font-size: 10px;
+        line-height: 18px;
+        @media screen and (min-width: $tablet) {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &:not(:first-child) {
+            padding-top: 10px;
+        }
+        i {
+            // font-size: 10px;
+            color: #C4C4C4;
+            margin-right: 8px;
+        }
+        span {
+            // font-size: 10px;
+            // line-height: 18px;
+        }
     }
 }
