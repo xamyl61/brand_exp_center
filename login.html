@@ -24,63 +24,67 @@
 
 <body>
 
-  <div class="content">
-    <header class="header">
-      <div class="header-top">
-        <a href="#" class="header-title">Brand Experience Centre</a>
-        <div class="header-auth">
-          <div class="header-login">
-            <a href="">
-              <img class="user-icon" src="img/icons/icon-user.svg" alt="">
-            </a>
-            <img class="logo" src="img/ex_logo@2x.png" alt="">
+  <div class="root">
+    <div class="root-item"> <!-- login -->
+      <div class="content">
+        <header class="header">
+          <div class="header-top">
+            <a href="#" class="header-title">Brand Experience Centre</a>
+            <div class="header-auth">
+              <div class="header-login">
+                <a href="">
+                  <img class="user-icon" src="img/icons/icon-user.svg" alt="">
+                </a>
+                <img class="logo" src="img/ex_logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+        </header>
+    
+        <div class="sidebar">
+          <div class="sidebar-cont form_code">
+            <div class="sidebar-header-title">
+              <p>Brand Experience Centre</p>
+            </div>
+            <h1 class="title-h1">Вход</h1>
+            <form class="form" action="">
+              <div class="field">
+                <label class="label" for="">Логин</label>
+                <input type="text" class="input" placeholder="+7 ">
+              </div>
+    
+              <div class="center">
+                <a class="text-link" href="#">Отправить код для входа</a>
+              </div>
+    
+              <div class="field">
+                <label class="label" for="">Код</label>
+                <input type="text" class="input" placeholder="Введите полученный код">
+              </div>
+    
+              <button class="btn blue">Войти</button>
+    
+            </form>
           </div>
         </div>
-      </div>
-    </header>
-
-    <div class="sidebar">
-      <div class="sidebar-cont form_code">
-        <div class="sidebar-header-title">
-          <p>Brand Experience Centre</p>
-        </div>
-        <h1 class="title-h1">Вход</h1>
-        <form class="form" action="">
-          <div class="field">
-            <label class="label" for="">Логин</label>
-            <input type="text" class="input" placeholder="+7 ">
-          </div>
-
-          <div class="center">
-            <a class="text-link" href="#">Отправить код для входа</a>
-          </div>
-
-          <div class="field">
-            <label class="label" for="">Код</label>
-            <input type="text" class="input" placeholder="Введите полученный код">
-          </div>
-
-   
-
-
-
-          <button class="btn blue">Войти</button>
-
-        </form>
+    
       </div>
     </div>
-
+    <footer class="footer">
+      <div class="footer-copy">© BMW 2021</div>
+      <div class="footer-nav">
+        <div class="item"><a href="#">Часто задаваемые вопросы</a></div>
+        <div class="item"><a href="#">Контакты</a></div>
+        <div class="item"><a href="#">copyright</a></div>
+        <div class="item"><a href="#">политика конфиденциальности</a></div>
+      </div>
+    </footer>
   </div>
-  <footer class="footer">
-    <div class="footer-copy">© BMW 2021</div>
 
-    <div class="footer-nav">
-      <div class="item"><a href="#">Часто задаваемые вопросы</a></div>
-      <div class="item"><a href="#">Контакты</a></div>
-      <div class="item"><a href="#">copyright</a></div>
-      <div class="item"><a href="#">политика конфиденциальности</a></div>
-    </div>
-  </footer>
+
+
+
+
 
   <!-- Временное подключение jquery, потом удлить -->
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
