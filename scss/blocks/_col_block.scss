@@ -8,13 +8,19 @@
         @media screen and (min-width: $tablet) {
             font-size: 32px;
             line-height: 40px;
+            padding: 0 0 20px 40px;
         }
     }
     .cont {
- 
+        @media screen and (min-width: $extra_large) {
+            padding: 40px 0 40px 20px;
+        }
     }
     .map {
         height: 200px;  
+        @media screen and (min-width: $extra_large) {
+            height: 100%;
+        }
         iframe {
             border: 0;
             height: 100%;
@@ -23,12 +29,27 @@
 
     }
     .grid {
+        @media screen and (min-width: $extra_large) {
+            display: grid;
+            grid-template-columns: 445px 1fr;
+            grid-gap: 20px; 
+        }
         .left-col {
             padding-bottom: 20px;
         }
         .right-col {
+            position: relative;
             .car-image {
                 margin-bottom: -10%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                @media screen and (min-width: $medium) {
+                    margin-bottom: -7%;
+                }
+                @media screen and (min-width: $extra_large) {
+                    position: absolute;
+                    top: -46%;
+                }
             }
         }
 
@@ -39,17 +60,59 @@
             }
             &-block {
                 margin-bottom: 20px;
-                border-bottom: 1px solid #CCCCCC;
+                @media screen and (min-width: $medium) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 40px; 
+                }
+                @media screen and (min-width: $extra_large) {
+                    grid-template-columns: 1fr;
+                    grid-gap: 0;
+                }
+                @media screen and (min-width: $extra_large) {
+                    margin-bottom: 0;
+                }
+                & > div {
+                    &:first-child {
+                        .item:first-child {
+                            border-top: none;
+                            padding-top: 10px;
+                            @media screen and (min-width: $tablet) {
+                                padding-top: 20px;
+                            }
+                        }
+                        .item:nth-child(3) {
+                            @media screen and (min-width: $medium) {
+                                border-bottom: 1px solid #CCCCCC;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        .item:first-child {
+                            @media screen and (min-width: $medium) {
+                                padding-top: 20px;
+                                border-top: none;
+                            }
+                        }
+                        .item:nth-child(2) {
+                            @media screen and (min-width: $medium) {
+                                border-bottom: 1px solid #CCCCCC;
+                            }
+                        }
+                    }
+                }
                 .item {
                     display: flex;
                     padding: 10px 0;
                     align-items: center;
+                    border-top: 1px solid #CCCCCC;
                     @media screen and (min-width: $tablet) {
                         padding: 20px 0px;
                     }
-                    &:not(:first-child) {
-                        border-top: 1px solid #CCCCCC;
+                    @media screen and (min-width: $extra_large) {
+                        padding: 16px 0px;
                     }
+                    
                     &-name {
                         font-weight: bold;
                         font-size: 12px;
@@ -71,9 +134,18 @@
             }
 
             .btn {
+                margin-top: 10px;
                 @media screen and (min-width: $tablet) {
                     max-width: 294px;
                     margin-left: auto;
+                }
+                @media screen and (min-width: $medium) {
+                    max-width: 100%;
+                    margin: 74px auto 0;
+                }
+                @media screen and (min-width: $extra_large) {
+                    max-width: 100%;
+                    margin: 20px auto 0; 
                 }
             }
         }
@@ -86,6 +158,12 @@
             @media screen and (min-width: $tablet) {
                 padding: 40px;
                 border-top: 40px solid #000;
+            }
+            @media screen and (min-width: $extra_large) {
+                padding: 0;
+                display: grid;
+                grid-template-columns: .57fr .43fr;
+                grid-gap: 20px; 
             }
             .top-title {
                 font-weight: 400;
@@ -129,9 +207,17 @@
                 }
                 .btn {
                     max-width: 132px;
+                    @media screen and (min-width: $tablet) {
+                        max-width: 180px;
+                    }
                 }
             }
             .descr {
+                & > div {
+                    @media screen and (min-width: $extra_large) {
+                        display: flex;
+                    }
+                }
                 .property {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
@@ -140,8 +226,14 @@
                         font-size: 12px;
                         line-height: 20px;
                         display: flex;
-
-                        & > div {
+                    }
+                    @media screen and (min-width: $extra_large) {
+                        flex-direction: column;
+                        grid-gap: 10px;
+                    }
+                    & + div {
+                        @media screen and (min-width: $extra_large) {
+                            padding-left: 10%;
                         }
                     }
                 }
@@ -155,6 +247,9 @@
                         padding: 40px 0 20px;
                         font-size: 22px;
                         line-height: 30px;
+                    }
+                    @media screen and (min-width: $extra_large) {
+                        padding: 0 0 20px;
                     }
                 }
                 .contact {
