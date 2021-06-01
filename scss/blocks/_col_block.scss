@@ -150,20 +150,17 @@
             }
         }
 
-
-        .test-drive {
+        .tile-block {
             padding: 40px 20px 20px;
-            border-top: 20px solid #000;
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
 
             @media screen and (min-width: $tablet) {
                 padding: 40px;
-                border-top: 40px solid #000;
             }
             @media screen and (min-width: $extra_large) {
                 padding: 0;
-                display: grid;
-                grid-template-columns: .57fr .43fr;
-                grid-gap: 20px; 
             }
             .top-title {
                 font-weight: 400;
@@ -178,6 +175,15 @@
                     padding-bottom: 20px;
                 }
             }
+        }
+        
+        .test-drive {
+            @media screen and (min-width: $extra_large) {
+                display: grid;
+                grid-template-columns: .57fr .43fr;
+                grid-gap: 20px; 
+            }
+
             .title-block {
                 padding: 10px 0 16px;
                 display: flex;

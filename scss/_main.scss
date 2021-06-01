@@ -356,6 +356,14 @@
   }
 }
 
+.top_black_border {
+  border-top: 20px solid #000;
+
+  @media screen and (min-width: $tablet) {
+      border-top: 40px solid #000;
+  }
+}
+
   
 
 

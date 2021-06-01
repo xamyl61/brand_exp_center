@@ -1,0 +1,67 @@
+.previous-bookings {
+    display: grid;
+    grid-gap: 20px; 
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    @media screen and (min-width: $tablet) {
+        padding-top: 40px;
+        grid-gap: 40px; 
+    }
+    @media screen and (min-width: $medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: $extra_large) {
+        grid-column-gap: 80px; 
+        padding: 0 40px 40px;
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .item {
+        padding-bottom: 20px;
+        img {
+            margin: 0 auto 10px;
+        }
+        .desc {
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .model {
+                font-size: 10px;
+                line-height: 18px;
+                @media screen and (min-width: $tablet) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .date {
+                font-size: 10px;
+                line-height: 18px;
+                color: #8E8E8E;
+                @media screen and (min-width: $tablet) {
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+            .rating {
+                font-size: 10px;
+                line-height: 18px;
+                color: #8E8E8E;
+                @media screen and (min-width: $tablet) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .stars {
+                color: #000;
+                text-align: right;
+
+                i.grey {
+                   color: #CCCCCC; 
+                }
+            }
+        }
+    }
+    
+}

@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star:before {
+  content: "\e906";
+}
+.icon-star-fill:before {
+  content: "\e907";
+}
 .icon-nav:before {
   content: "\e904";
   color: #8e8e8e;

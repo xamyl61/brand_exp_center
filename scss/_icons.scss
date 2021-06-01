@@ -25,27 +25,32 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-nav:before {
-    content: "\e904";
-    color: #8e8e8e;
-  }
-  .icon-calendar:before {
-    content: "\e905";
-  }
-  .icon-akpp:before {
-    content: "\e900";
-    color: #4d4d4d;
-  }
-  .icon-engine:before {
-    content: "\e901";
-    color: #4d4d4d;
-  }
-  .icon-gas:before {
-    content: "\e902";
-    color: #4d4d4d;
-  }
-  .icon-rear:before {
-    content: "\e903";
-    color: #4d4d4d;
-  }
-  
+.icon-star:before {
+  content: "\e906";
+}
+.icon-star-fill:before {
+  content: "\e907";
+}
+.icon-nav:before {
+  content: "\e904";
+  color: #8e8e8e;
+}
+.icon-calendar:before {
+  content: "\e905";
+}
+.icon-akpp:before {
+  content: "\e900";
+  color: #4d4d4d;
+}
+.icon-engine:before {
+  content: "\e901";
+  color: #4d4d4d;
+}
+.icon-gas:before {
+  content: "\e902";
+  color: #4d4d4d;
+}
+.icon-rear:before {
+  content: "\e903";
+  color: #4d4d4d;
+}
