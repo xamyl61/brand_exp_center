@@ -437,18 +437,21 @@ h6 {
   text-align: center;
 }
 
-html, body {
+html, body, .root {
   height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: "BMWTypeNext";
   background: #E5E5E5;
 }
 
-.content {
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.root-item {
   flex: 1 0 auto;
 }
 
@@ -456,6 +459,9 @@ body {
   flex-shrink: 0;
 }
 
+.content {
+  height: 100%;
+}
 @media screen and (min-width: 1024px) {
   .content {
     background-image: url("../img/main_bg.JPG");

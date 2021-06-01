@@ -283,16 +283,18 @@
 
 
   // sticky footer
-  html, body {
+  html, body, .root {
     height: 100%;
   }
   body {
-    display: flex;
-    flex-direction: column;
     font-family: 'BMWTypeNext';
     background: #E5E5E5;
   }
-  .content {
+  .root {
+    display: flex;
+    flex-direction: column;
+  }
+  .root-item {
     flex: 1 0 auto;
   }
   .footer {
@@ -301,6 +303,7 @@
 
   
 .content {
+  height: 100%;
   @media screen and (min-width: $medium) { 
     background-image: url("../img/main_bg.JPG");
     background-repeat: no-repeat;
