@@ -1453,6 +1453,18 @@ body {
   color: #fff;
   font-size: 18px;
   line-height: 20px;
+  position: relative;
+}
+.main_block .image-block:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 768px) {
   .main_block .image-block {
@@ -1477,6 +1489,10 @@ body {
     grid-gap: 175px;
   }
 }
+.main_block .image-block > div {
+  z-index: 1;
+  position: relative;
+}
 @media screen and (min-width: 1153px) {
   .main_block .image-block > div {
     padding-right: 50px;
@@ -1488,6 +1504,11 @@ body {
 @media screen and (min-width: 1024px) {
   .main_block .image-block p {
     max-width: 680px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main_block .image-block br.mobile {
+    display: none;
   }
 }
 .main_block .image-block br.tablet {
@@ -1663,6 +1684,15 @@ body {
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  color: #000;
+}
+.col-block .grid .user-data-block .item-value::placeholder {
+  color: #000;
 }
 @media screen and (min-width: 768px) {
   .col-block .grid .user-data-block .item-value {
