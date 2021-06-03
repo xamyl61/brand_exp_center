@@ -1,0 +1,102 @@
+.test-drive-columns {
+    @media screen and (min-width: 1700px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 40px;
+    }
+    .col-1 {
+        border-bottom: 1px solid #CCCCCC;
+        @media screen and (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+        }
+        @media screen and (min-width: 1700px) {
+            border-bottom: none;
+        }
+        &.right_time_slots {
+            border-bottom: none;
+            .calendar > .time-slots {
+                @media screen and (min-width: $tablet) {
+                    padding-top: 27px;
+                }
+                
+            }
+        }
+    }
+
+    .map-block{
+        @media screen and (min-width: 1700px) {
+            padding-left: 40px;
+            
+            border-left: 1px solid #ccc;
+        }
+        .date{
+            padding: 20px 0 10px;
+            font-size: 16px;
+            line-height: 22px;
+
+            @media screen and (min-width: $tablet) {
+                padding: 40px 0 20px;
+                font-size: 22px;
+                line-height: 30px;
+            }
+            @media screen and (min-width: $extra_large) {
+                padding-top: 0;
+                margin-top: 20px;
+            }
+        }
+        .contact {
+            padding-bottom: 10px;
+            @media screen and (min-width: $tablet) {
+                padding-bottom: 20px;
+            }
+            
+            .adress {
+                color: #000;
+                display: inline-block;
+                font-size: 10px;
+                line-height: 18px;
+
+                @media screen and (min-width: $tablet) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+            .phone {
+                color: #000;
+                display: inline-block;
+                font-size: 10px;
+                line-height: 18px;
+            }
+        }
+    }
+    .map {
+        height: 200px;
+        @media screen and (min-width: $extra_large) {
+            height: 220px;
+        }
+        iframe {
+            border: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .block-btns {
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+
+        @media screen and (min-width: $tablet) {
+            padding-top: 20px;
+            grid-template-columns: 115px 290px;
+            grid-gap: 20px;
+            justify-content: end;
+        }
+        @media screen and (min-width: 1700px) {
+            grid-template-columns: 115px 1fr;
+        }
+    }
+
+}

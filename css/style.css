@@ -149,6 +149,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-left:before {
+  content: "";
+}
+
+.icon-arrow-right:before {
+  content: "";
+}
+
 .icon-star:before {
   content: "";
 }
@@ -889,6 +897,133 @@ body {
   color: #fff;
   border-color: #fff;
 }
+.btn.border_grey {
+  border-color: #ccc;
+}
+
+.calendar-title {
+  padding: 0 0 5px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .calendar-title {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+}
+.calendar-widjet {
+  border: 1px solid #F2F2F2;
+}
+.calendar-widjet-header {
+  padding: 0 30px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  background: #F2F2F2;
+}
+.calendar-widjet-header i {
+  font-size: 12px;
+}
+.calendar-widjet-header i.grey {
+  color: #CCCCCC;
+}
+.calendar-widjet .month {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.calendar-widjet-body {
+  padding: 16px;
+}
+.calendar-widjet-body-weekday {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding-bottom: 24px;
+}
+.calendar-widjet-body-weekday div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  justify-items: center;
+}
+.calendar-widjet-body-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.calendar-widjet-body-dates div {
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.calendar-widjet-body-dates div span {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.calendar-widjet-body-dates div.current_day {
+  font-weight: bold;
+}
+.calendar-widjet-body-dates div.choosed_day {
+  color: #fff;
+  position: relative;
+}
+.calendar-widjet-body-dates div.choosed_day span {
+  background: #000;
+  border-radius: 100%;
+}
+.calendar-widjet-body-dates div.not_available {
+  color: #CCCCCC;
+}
+
+.time-slots {
+  padding: 10px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .time-slots {
+    grid-gap: 20px;
+    padding: 20px 0 40px;
+  }
+}
+.time-slots .item {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 42px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .time-slots .item {
+    height: 52px;
+  }
+}
+.time-slots .item.choosed {
+  border: 2px solid #000;
+}
 
 .header {
   padding: 8px 21px;
@@ -1543,14 +1678,14 @@ body {
   }
 }
 
-.col-block > .title {
+.col-block .block-title {
   font-size: 18px;
   line-height: 20px;
   font-weight: 300;
   padding: 0 0 10px 20px;
 }
 @media screen and (min-width: 768px) {
-  .col-block > .title {
+  .col-block .block-title {
     font-size: 32px;
     line-height: 40px;
     padding: 0 0 20px 40px;
@@ -1558,8 +1693,12 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .col-block .cont {
-    padding: 40px 0 40px 20px;
+    padding: 40px;
   }
+}
+.col-block .cont.padding_row_none {
+  padding-left: 0;
+  padding-right: 0;
 }
 .col-block .map {
   height: 200px;
@@ -1581,26 +1720,22 @@ body {
     grid-gap: 20px;
   }
 }
-.col-block .grid .left-col {
-  padding-bottom: 20px;
+@media screen and (min-width: 768px) {
+  .col-block .grid .left-col {
+    padding-bottom: 20px;
+  }
 }
 .col-block .grid .right-col {
   position: relative;
 }
 .col-block .grid .right-col .car-image {
-  margin-bottom: -10%;
   margin-left: 50%;
-  transform: translateX(-50%);
-}
-@media screen and (min-width: 1024px) {
-  .col-block .grid .right-col .car-image {
-    margin-bottom: -7%;
-  }
+  transform: translate3d(-50%, 38%, 0);
 }
 @media screen and (min-width: 1400px) {
   .col-block .grid .right-col .car-image {
     position: absolute;
-    top: -46%;
+    transform: translate3d(-50%, -70%, 0);
   }
 }
 .col-block .grid .user-data {
@@ -1738,7 +1873,7 @@ body {
   }
 }
 .col-block .grid .tile-block .top-title {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 20px;
   padding-bottom: 10px;
@@ -1749,6 +1884,15 @@ body {
     font-size: 22px;
     line-height: 30px;
     padding-bottom: 20px;
+  }
+}
+.col-block .grid .tile-block .top-title.no_border {
+  border-bottom: none;
+}
+@media screen and (min-width: 768px) {
+  .col-block .grid .tile-block .top-title.no_border {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1959,6 +2103,178 @@ body {
 }
 .previous-bookings .item .desc .stars i.grey {
   color: #CCCCCC;
+}
+
+.order {
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .order {
+    padding: 40px;
+  }
+}
+.order-title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  padding-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  .order-title {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 10px;
+  }
+}
+.order-model {
+  color: #8E8E8E;
+  font-size: 10px;
+  line-height: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 768px) {
+  .order-model {
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.order-subtitle {
+  font-size: 10px;
+  line-height: 18px;
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .order-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 0;
+  }
+}
+.order-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .order-btns {
+    grid-template-columns: 173px 173px;
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .test-drive-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 40px;
+  }
+}
+.test-drive-columns .col-1 {
+  border-bottom: 1px solid #CCCCCC;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .col-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .test-drive-columns .col-1 {
+    border-bottom: none;
+  }
+}
+.test-drive-columns .col-1.right_time_slots {
+  border-bottom: none;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .col-1.right_time_slots .calendar > .time-slots {
+    padding-top: 27px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .test-drive-columns .map-block {
+    padding-left: 40px;
+    border-left: 1px solid #ccc;
+  }
+}
+.test-drive-columns .map-block .date {
+  padding: 20px 0 10px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .map-block .date {
+    padding: 40px 0 20px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .test-drive-columns .map-block .date {
+    padding-top: 0;
+    margin-top: 20px;
+  }
+}
+.test-drive-columns .map-block .contact {
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .map-block .contact {
+    padding-bottom: 20px;
+  }
+}
+.test-drive-columns .map-block .contact .adress {
+  color: #000;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .map-block .contact .adress {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.test-drive-columns .map-block .contact .phone {
+  color: #000;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 18px;
+}
+.test-drive-columns .map {
+  height: 200px;
+}
+@media screen and (min-width: 1400px) {
+  .test-drive-columns .map {
+    height: 220px;
+  }
+}
+.test-drive-columns .map iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+.test-drive-columns .block-btns {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .test-drive-columns .block-btns {
+    padding-top: 20px;
+    grid-template-columns: 115px 290px;
+    grid-gap: 20px;
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .test-drive-columns .block-btns {
+    grid-template-columns: 115px 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

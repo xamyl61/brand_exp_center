@@ -1,0 +1,53 @@
+.order {
+    padding: 20px;
+    @media screen and (min-width: $tablet) {
+        padding: 40px;
+    }
+    &-title {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 5px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 32px;
+            line-height: 40px;
+            padding-bottom: 10px;
+        }
+    }
+    &-model {
+        color: #8E8E8E;
+        font-size: 10px;
+        line-height: 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 20px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &-subtitle {
+        font-size: 10px;
+        line-height: 18px;
+        padding: 10px 0;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 20px 0;
+        }
+    }
+    &-btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: 173px 173px;
+            grid-gap: 20px;
+        }
+
+    }
+}

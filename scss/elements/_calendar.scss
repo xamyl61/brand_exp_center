@@ -1,0 +1,97 @@
+.calendar {
+    &-title {
+        padding: 0 0 5px;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 18px;
+        text-transform: uppercase;
+        @media screen and (min-width: $tablet) {
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+    }
+    &-widjet {
+        border: 1px solid #F2F2F2;
+        &-header {
+            padding: 0 30px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            background: #F2F2F2;
+            i {
+               font-size: 12px;
+
+               &.grey {
+                   color: #CCCCCC;
+               }
+            }
+        }
+        .month {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &-body {
+            padding: 16px;
+            &-weekday {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-gap: 10px;
+                padding-bottom: 24px;
+                
+                div {
+                    // width: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 20px;
+                    justify-items: center;
+                }
+            }
+            &-dates {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-gap: 10px;
+                div {
+                    color: #000;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    justify-items: center;
+   
+
+                    span {
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        justify-items: center;
+                    }
+
+                    &.current_day {
+                        font-weight: bold;
+                    }
+                    &.choosed_day {
+                        color: #fff;
+                        position: relative;
+                        span {
+                            background: #000;
+                            border-radius: 100%;
+                        }
+                    }
+                    &.not_available {
+                        color: #CCCCCC;
+                    }
+                }
+            }
+        }
+    }
+}
