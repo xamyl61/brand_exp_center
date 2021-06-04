@@ -1,0 +1,101 @@
+.modal-layer {
+    padding: 20px;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet) {
+        padding: 40px;
+    }
+    
+    
+    .modal {
+        padding: 20px;
+        background: #fff;
+        width: 100%;
+        max-width: 360px;
+        overflow-y: auto;
+        max-height: 100%;
+
+        & > div {
+            
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 300;;
+            p {
+                margin: 0;
+                @media screen and (min-width: $tablet) {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                &:first-child {
+                    margin-bottom: 10px;
+
+                    @media screen and (min-width: $tablet) {
+                        font-size: 32px;
+                        line-height: 40px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .stars {
+        display: flex;
+        justify-content: space-between;
+        font-size: 36px;
+        padding: 20px 0 16px;
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 36px;
+        }
+
+        i {
+            cursor: pointer;
+        }
+
+    }
+
+    label {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    textarea {
+        font-size: 12px;
+        height: 162px;
+        padding: 7px 10px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 14px 14px;
+        }
+    }
+
+    .btns-block {
+        padding-top: 20px;
+
+        .btn:not(:first-child) {
+            margin-top: 10px;
+
+            @media screen and (min-width: $tablet) {
+                margin-top: 20px;
+            }
+        }
+    }
+}

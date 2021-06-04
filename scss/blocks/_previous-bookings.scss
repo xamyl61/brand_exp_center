@@ -56,6 +56,9 @@
             .stars {
                 color: #000;
                 text-align: right;
+                i{
+                    cursor: pointer;
+                }
 
                 i.grey {
                    color: #CCCCCC; 

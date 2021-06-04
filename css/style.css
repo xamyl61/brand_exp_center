@@ -669,6 +669,27 @@ body {
     padding: 0 20px;
   }
 }
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.input:focus {
+  border-color: #000;
+}
+.input:focus::placeholder {
+  color: #000;
+}
+.input.error {
+  border-color: #C1281B;
+}
+.input.error::placeholder {
+  color: rgba(193, 40, 27, 0.3);
+}
+.input.error:focus {
+  border-color: #000;
+}
+.input.error:focus::placeholder {
+  color: #000;
+}
 
 .inputfile {
   width: 0.1px;
@@ -726,6 +747,27 @@ body {
     font-size: 16px;
     padding: 15px 20px;
   }
+}
+.textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.textarea:focus {
+  border-color: #000;
+}
+.textarea:focus::placeholder {
+  color: #000;
+}
+.textarea.error {
+  border-color: #C1281B;
+}
+.textarea.error::placeholder {
+  color: rgba(193, 40, 27, 0.3);
+}
+.textarea.error:focus {
+  border-color: #000;
+}
+.textarea.error:focus::placeholder {
+  color: #000;
 }
 
 .checbox-container {
@@ -926,6 +968,11 @@ body {
   justify-content: space-between;
   background: #F2F2F2;
 }
+@media screen and (min-width: 768px) {
+  .calendar-widjet-header {
+    justify-content: center;
+  }
+}
 .calendar-widjet-header i {
   font-size: 12px;
 }
@@ -937,6 +984,12 @@ body {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .calendar-widjet .month {
+    width: 100%;
+    max-width: 250px;
+  }
 }
 .calendar-widjet-body {
   padding: 16px;
@@ -2101,6 +2154,9 @@ body {
   color: #000;
   text-align: right;
 }
+.previous-bookings .item .desc .stars i {
+  cursor: pointer;
+}
 .previous-bookings .item .desc .stars i.grey {
   color: #CCCCCC;
 }
@@ -2174,7 +2230,7 @@ body {
 .test-drive-columns .col-1 {
   border-bottom: 1px solid #CCCCCC;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .test-drive-columns .col-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2274,6 +2330,101 @@ body {
 @media screen and (min-width: 1700px) {
   .test-drive-columns .block-btns {
     grid-template-columns: 115px 1fr;
+  }
+}
+
+.modal-layer {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer {
+    padding: 40px;
+  }
+}
+.modal-layer .modal {
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+  max-width: 360px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+.modal-layer .modal-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.modal-layer .modal-text p {
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer .modal-text p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+.modal-layer .modal-text p:first-child {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer .modal-text p:first-child {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+.modal-layer .stars {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36px;
+  padding: 20px 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer .stars {
+    padding-bottom: 36px;
+  }
+}
+.modal-layer .stars i {
+  cursor: pointer;
+}
+.modal-layer label {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.modal-layer textarea {
+  font-size: 12px;
+  height: 162px;
+  padding: 7px 10px;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer textarea {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 14px;
+  }
+}
+.modal-layer .btns-block {
+  padding-top: 20px;
+}
+.modal-layer .btns-block .btn:not(:first-child) {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .modal-layer .btns-block .btn:not(:first-child) {
+    margin-top: 20px;
   }
 }
 

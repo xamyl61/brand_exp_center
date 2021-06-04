@@ -6,7 +6,7 @@
     }
     .col-1 {
         border-bottom: 1px solid #CCCCCC;
-        @media screen and (min-width: $tablet) {
+        @media screen and (min-width: $medium) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 40px;
