@@ -12,6 +12,8 @@
         }
     }
     .cont {
+        position: relative;
+        z-index: 1;
         @media screen and (min-width: $extra_large) {
             padding: 40px;
         }
@@ -166,7 +168,7 @@
 
         .tile-block {
             padding: 40px 20px 20px;
-            &:not(:first-child) {
+            &:not(:first-child) { 
                 margin-top: 20px;
             }
 
