@@ -1418,6 +1418,8 @@ body {
 .car-card {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background: #fff;
+  position: relative;
+  padding-bottom: 80px;
 }
 .car-card .photo {
   padding: 21px 26px;
@@ -1436,6 +1438,10 @@ body {
 }
 .car-card .btn {
   margin-top: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: calc(100% - 40px);
 }
 
 .property-item {
